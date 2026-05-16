@@ -5,12 +5,12 @@ const fs = require('fs');
 (async () => {
 
     
-    const URL_CAPITULO = 'https://www.wattpad.com/1629229026';
+    const URL_CAPITULO = 'https://www.wattpad.com/1629229026-encuestas-parte-1-sin-título';
 
     
 
     const browser = await chromium.launch({
-        headless: false, // true = oculto
+        headless: true, // false = mostrar
         slowMo: 100
     });
 
@@ -57,7 +57,7 @@ const fs = require('fs');
 
         const poll = polls[i];
 
-        console.log(`\nEncuesta ${i + 1}`);
+        // console.log(`\nEncuesta ${i + 1}`);
 
 
         let titulo = 'Sin título';
@@ -130,11 +130,11 @@ const fs = require('fs');
     // // GUARDAR HTML COMPLETO
     // // ==========================================
 
-    const html = await page.content();
+    // const html = await page.content();
 
-    fs.writeFileSync('pagina.html', html);
+    // fs.writeFileSync('pagina.html', html);
 
-    console.log('HTML guardado en pagina.html');
+    // console.log('HTML guardado en pagina.html');
 
     // ==========================================
     // CERRAR
