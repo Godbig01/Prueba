@@ -18,7 +18,7 @@ const fs = require('fs');
 
     
 
-    console.log('Entrando a Wattpad...');
+    // console.log('Entrando a Wattpad...');
 
     await page.goto(URL_CAPITULO, {
         waitUntil: 'networkidle'
@@ -119,11 +119,11 @@ const fs = require('fs');
     // ==========================================
 
     fs.writeFileSync(
-        'encuestas.json',
+        'JSON/encuestas.json',
         JSON.stringify(resultadoFinal, null, 2)
     );
 
-    console.log('\nJSON guardado correctamente');
+    // console.log('\nJSON guardado correctamente');
 
     // // ==========================================
     // // OPCIONAL:
